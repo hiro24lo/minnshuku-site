@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}予約一覧 - 民宿サイト{% endblock %}
+
+{% block content %}
+  <h2>予約一覧</h2>
+  <table border="1">
+    <tr>
+      <th>名前</th>
+      <th>メール</th>
+      <th>チェックイン</th>
+      <th>チェックアウト</th>
+      <th>メッセージ</th>
+      <th>予約日時</th>
+    </tr>
+    {% for r in reservations %}
+    <tr>
+      <td>{{ r.name }}</td>
+      <td>{{ r.email }}</td>
+      <td>{{ r.checkin }}</td>
+      <td>{{ r.checkout }}</td>
+      <td>{{ r.message or '' }}</td>
+      <td>{{ r.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

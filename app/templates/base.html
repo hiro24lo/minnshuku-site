@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}民宿ホームページ{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <h1>○○民宿</h1>
+    <nav>
+        <ul>
+          <li><a href="{{ url_for('main.index') }}">ホーム</a></li>
+          <li><a href="{{ url_for('main.rooms') }}">客室</a></li>
+          <li><a href="{{ url_for('main.plans') }}">プラン</a></li>
+          <li><a href="{{ url_for('main.reservation') }}">予約</a></li>
+          <li><a href="{{ url_for('main.contact') }}">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <!-- コンテンツ -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 ○○民宿</p>
+  </footer>
+
+</body>
+</html>

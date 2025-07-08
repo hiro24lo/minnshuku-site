@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}お部屋のご案内{% endblock %}
+
+{% block content %}
+  <h2>お部屋の紹介</h2>
+
+  <section>
+    <img src="{{ url_for('static', filename='images/room1.jpg') }}" alt="和室" width="500">
+    <p>8畳の和室。自然光が心地よく、落ち着いた空間でゆったりお過ごしいただけます。</p>
+  </section>
+
+  <section>
+    <img src="{{ url_for('static', filename='images/room2.jpg') }}" alt="洋室" width="500">
+    <p>2名様用の洋室。ベッドスタイルで快適な睡眠をサポート。</p>
+  </section>
+{% endblock %}

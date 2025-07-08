@@ -1,0 +1,103 @@
+/* app/static/style.css */
+
+/* 全体設定 */
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f6f2;
+    color: #333;
+  }
+  
+  /* ヘッダー */
+  header {
+    background-color: #6b8e23;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* メインコンテンツ */
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* フッター */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+  }
+  /* スマホサイズの調整（幅768px以下） */
+@media (max-width: 768px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    header h1 {
+      font-size: 24px;
+    }
+  
+    table {
+      font-size: 14px;
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  input, textarea, select, button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    main {
+      margin: 20px;
+      padding: 10px;
+    }
+  
+    table {
+      font-size: 13px;
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+  
+    input, textarea, select, button {
+      font-size: 16px;
+    }
+  }
+  
